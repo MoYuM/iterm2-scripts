@@ -62,8 +62,6 @@ async def main(connection):
         # 保存修改后的数据
         with open(DYNAMIC_PROFILE_PATH, "w") as file:
             json.dump(data, file)
-
-        await window.async_create_tab(command=[f"cd {WORKING_DIRECTORY_PATH}/{folder_name}"])
     else:
         print("No current window")
     
